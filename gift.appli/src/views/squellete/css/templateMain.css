@@ -1,0 +1,12 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .header { grid-area: 1 / 1 / 2 / 6;
+    background-color: brown; }
+    .footer { grid-area: 5 / 1 / 6 / 6;background-color: aquamarine; }
+    .leftBarre { grid-area: 2 / 1 / 5 / 2; background-color: burlywood; }

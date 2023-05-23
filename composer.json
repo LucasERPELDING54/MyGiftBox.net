@@ -1,0 +1,9 @@
+{
+    "name": "app/gift",
+    "require": {
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.11",
+        "twig/twig": "3.*",
+        "slim/twig-view": "^3.3"
+    }
+}
