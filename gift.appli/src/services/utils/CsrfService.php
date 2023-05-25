@@ -11,10 +11,12 @@ class CsrfService
         return $token;
     }
 
-    public function verify($token){
+    public function check($token){
         if(isset($_SESSION['csrf']) && $_SESSION['csrf'] === $token){
-            return true;
+            unset($_SESSION['csrf']);
+           
         }
-        return false;
+        unset($_SESSION['csrf']);
+        throw new CsrfException("Erreur CSRF");
     }
 }
