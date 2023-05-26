@@ -66,10 +66,10 @@ services:
 # mysql + adminer / can be replaced by mariadb
 #############################
   sql:
-    image: mariadb:latest
+    image: mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=r00t66
-      - MYSQL_DATABASE=gift
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=giftbox
       - MYSQL_USER=gift
       - MYSQL_PASSWORD=gift
     ports:
