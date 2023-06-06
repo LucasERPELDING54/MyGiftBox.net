@@ -8,7 +8,7 @@ services:
   app:
     image: canals/php:latest
     ports:
-      - "18023:80"
+      - "15081:80"
       - "15444:443"
     volumes :
       - ./gift.appli/public:/var/www/html
