@@ -8,7 +8,7 @@ services:
   app:
     image: canals/php:latest
     ports:
-      - "15080:80"
+      - "20080:90"
       - "15443:443"
     volumes :
       - ./gift.appli/public:/var/www/html
@@ -46,19 +46,7 @@ services:
     depends_on:
       - sql
 
-  back:
-    image: canals/php:latest
-    ports:
-      - "15380:80"
-      - "15743:443"
-    volumes :
-      - ./gift.back/public:/var/www/html
-      - ./gift.back/src:/var/www/src
-    working_dir: /var/www/src
-    networks:
-      - gift.net
-    depends_on:
-      - sql
+
 
 
 
@@ -73,7 +61,7 @@ services:
       - MYSQL_USER=gift
       - MYSQL_PASSWORD=gift
     ports:
-      - "3606:3306"
+      - "30306:3306"
     networks:
       gift.net:
         aliases:
@@ -82,7 +70,7 @@ services:
   adminer:
     image: adminer
     ports:
-      - "8080:8080"
+      - "21083:8080"
     networks:
       - gift.net
 
