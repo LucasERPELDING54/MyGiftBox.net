@@ -35,7 +35,7 @@ services:
   api:
     image: canals/php:latest
     ports:
-      - "15280:80"
+      - "15281:80"
       - "15644:443"
     volumes :
       - ./gift.api/public:/var/www/html
