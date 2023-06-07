@@ -32,5 +32,6 @@ class CategorieCreateProcessAction extends AbstractAction{
 
         $routePerser = RouteContext::fromRequest($rq)->getRouteParser();
         $url = $routeParser->urlFor('categorie');
+        return $rs->withHeader('location', $url)->withStatus(302);
     }
 }
