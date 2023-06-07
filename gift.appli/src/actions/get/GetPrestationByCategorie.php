@@ -21,7 +21,7 @@ class GetPrestationByCategorie extends AbstractAction{
         $routeParser = \Slim\Routing\RouteContext::fromRequest($request)->getRouteParser();
 
         foreach ($prestation as $index => $presta) {
-            $prestation[$index]['url'] = '/prestations/?id='.$presta['id'];
+            $prestation[$index]['url'] = '/prestations?id='.$presta['id'];
 
         }
         $data = ['categ_id' => $args['id'], 'presta_liste' => $prestation ];

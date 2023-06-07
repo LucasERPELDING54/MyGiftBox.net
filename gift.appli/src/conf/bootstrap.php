@@ -7,7 +7,6 @@ use Twig\Loader\FilesystemLoader;
 $app = Factory::create();
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware(true, false, false);
-$app->setBasePath('/gift.appli/public/index.php');
 
 $twig = \Slim\Views\Twig::create(__DIR__ . '/../views/', ['cache'=> __DIR__ . '/../views/cache/', 'auto_reload' => true]);
 $app->add(\Slim\Views\TwigMiddleware::create($app, $twig));
