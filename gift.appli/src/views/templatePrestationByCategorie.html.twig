@@ -5,11 +5,14 @@
     <title>Prestation {{ id }}</title>
 </head>
 <body>
-<ul>
+{%include "squellete/templateMain.html.twig" %}
+    <ul>
     {% for presta in presta_liste %}
-        <li><a href="{{ presta.url }}">{{ presta.libelle }}</a>
-        ({{ presta.tarif }}$ {{ presta.unite }} - id = {{ presta.id }})</li>
+        <img src = "../../../shared/img/{{presta['img']}} width="200" height="200"">
+        <a href="{{ presta.url }}">{{ presta.libelle }}</a>
+        ({{ presta.tarif }}$ {{ presta.unite }} - id = {{ presta.id }})</li><br>  
     {% endfor %}
+    
     </ul>
 </body>
 </html>

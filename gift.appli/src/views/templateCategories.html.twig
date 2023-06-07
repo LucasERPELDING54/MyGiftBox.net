@@ -9,7 +9,7 @@
 <h1>Liste des categories</h1>
     {% for categorie in categories %}
 
-    <h2><a href="{{ categorie.id }}">{{ categorie.id }}</a>
+    <h2><a href="categories/{{categorie.id}}">{{ categorie.id }}</a>
 </h2>
     <h2>{{ categorie.libelle }}</h2>
     <p>{{ categorie.description }}</p>
