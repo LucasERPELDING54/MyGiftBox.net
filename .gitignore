@@ -1,3 +1,4 @@
 #ignoring conf file
 .conf
 .conf.*
+.dist
