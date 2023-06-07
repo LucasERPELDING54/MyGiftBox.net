@@ -56,7 +56,7 @@ class __TwigTemplate_f6bf147f328c304220e1f3bb9048137b extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 11
             echo "
-    <h2><a href=\"";
+    <h2><a href=\"categories/";
             // line 12
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 12), "html", null, true);
             echo "\">";

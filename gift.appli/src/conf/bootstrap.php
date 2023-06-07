@@ -1,5 +1,4 @@
 <?php
-include 'C:\wamp64\www\gift\gift.appli\src\vendor\autoload.php';
 
 use gift\app\services\utils\Eloquent;
 use Slim\Factory\AppFactory as Factory;

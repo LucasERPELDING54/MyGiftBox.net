@@ -41,6 +41,7 @@ class __TwigTemplate_bdd84319dbd27605b44496c894f5a692 extends Template
     <meta charset=\"UTF-8\">
     <title>Main page</title>
     <link rel=\"stylesheet\" href=\"css/templateMain.css\">
+    <link rel=\"stylesheet\" href=\"css/prestation.css\"/>
 </head>
 
 <body>
