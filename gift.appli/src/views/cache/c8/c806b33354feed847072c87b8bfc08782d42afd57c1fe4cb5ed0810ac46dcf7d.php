@@ -55,9 +55,9 @@ class __TwigTemplate_4d0f540ff274bd2eb024bb9d34e5a3a9c9e2654adbc45a823da71f0fb91
         $context['_seq'] = twig_ensure_traversable(($context["presta_liste"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["presta"]) {
             // line 11
-            echo "        <img src = \"../../../shared/img/";
+            echo "        <img src = \"../../shared/img/";
             echo twig_escape_filter($this->env, (($__internal_compile_0 = $context["presta"]) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0["img"] ?? null) : null), "html", null, true);
-            echo " width=\"200\" height=\"200\"\">
+            echo "\">
         <a href=\"";
             // line 12
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "url", [], "any", false, false, false, 12), "html", null, true);

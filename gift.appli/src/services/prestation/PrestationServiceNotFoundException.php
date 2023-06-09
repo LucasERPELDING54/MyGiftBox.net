@@ -20,7 +20,7 @@ class PrestationService {
             throw new HttpBadRequestException($request, "L'id de la catégorie n'est pas renseigné");
         }
     }
-
+    
     public function getPrestationById( $id) : array {
         try {
             return Prestation::findOrFail($id)->toArray();
@@ -46,5 +46,21 @@ class PrestationService {
         }
        
     }
+
+    function modifyPrestation(array $modif) : void {
+        $prestation = Prestation::findOrFail($modif['id']);
+        $prestation->libelle = $modif['libelle'];
+        $prestation->description = $modif['description'];
+        $prestation->tarif = $modif['tarif'];
+        $prestation->unite = $modif['unite'];
+        $prestation->save();
+    }
+
+    function defineOrModifyCategorieOfPrestation(int $prestationID, int $categorieID) : void {
+        $prestation = Prestation::findOrFail($prestationID);
+        $prestation->categorie()->associate($categorieID);
+        $prestation->save();
+    }
+
 }
 

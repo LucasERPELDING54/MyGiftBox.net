@@ -1,6 +1,6 @@
 <?php
 
-namespace gift\app\actions;
+namespace gift\app\actions\get;
 
 use gift\app\services\prestations\PrestationsService;
 use gift\app\services\utils\CsrfService;
