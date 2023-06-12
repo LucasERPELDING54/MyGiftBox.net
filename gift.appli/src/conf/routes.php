@@ -1,5 +1,6 @@
 <?php
 
+use gift\api\getCategoriesByApi;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -14,4 +15,5 @@ return function (\Slim\App $app): void {
     $app->get('/prestations[/]', \gift\app\actions\get\GetPrestationByIdAction::class)->setName('getPrestationByIdAction');
     $app->get('/categories/{id:\d+}/prestations', \gift\app\actions\get\GetPrestationByCategorie::class)->setName('getPrestationByCategorie');
     $app->get('/boxes[/]', GetBoxesAction::class);
+    $app->get('/api/categories[/]', getCategoriesByApi::class);
 };
