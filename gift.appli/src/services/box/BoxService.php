@@ -2,6 +2,7 @@
 
 namespace gift\app\services\box;
 
+use gift\app\models\Box;
 use gift\app\models\Categorie;
 use Ramsey\Uuid\Uuid;
 
@@ -14,6 +15,16 @@ class BoxService {
         $box->description = $donnee['description'];
 
         $box->save();
+    }
+
+    function getBoxes() : array {
+        $box = Box::all();
+        return $box->toArray();
+    }
+
+    function getBoxById(string $id) : array {
+        $box = Box::where('id', $id)->first();
+        return $box->toArray();
     }
 
 }
