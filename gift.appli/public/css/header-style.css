@@ -1,0 +1,8 @@
+#header {
+    background-color: orange;
+    padding: 10px 30px;
+    margin: -10px;
+    font-family: "Arial";
+    display: flex;
+    color: white;
+}

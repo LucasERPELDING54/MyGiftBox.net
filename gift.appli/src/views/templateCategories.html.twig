@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Categorie {{ id }}</title>
-</head>
-<body>
-{%include "squellete/templateMain.html.twig" %}
-<h1>Liste des categories</h1>
-    {% for categorie in categories %}
+{% extends "gift.main.twig" %}
 
-    <h2><a href="categories/{{categorie.id}}">{{ categorie.id }}</a>
-</h2>
-    <h2>{{ categorie.libelle }}</h2>
-    <p>{{ categorie.description }}</p>
-    {% endfor %}
-</body>
-</html>
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+    <h1>Categories</h1>
+    <ul>
+        {% for categ in categories %}
+            <li><a href="{{ url_for('getCategoriesByIdAction', { 'id': categ.id }) }}">{{categ.libelle}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
