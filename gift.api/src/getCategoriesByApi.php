@@ -13,6 +13,10 @@ class getCategoriesByApi extends AbstractAction
     {
         $service = new CategorieService();
         $cat = $service->getCategories();
+        $data=["type"=>"collection",
+            "count"=>count($cat),
+            "categories"=>$cat
+        ];
 
         $response->getBody()->write(json_encode($cat));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
