@@ -1,11 +1,4 @@
 <?php
-/**
- * File:  Eloquents.php
- * Creation Date: 27/12/2022
- * description: classe Eloquent, service de connexion à la base de données
- *
- * @author: canals
- */
 
 namespace gift\app\services\utils;
 
