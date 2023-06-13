@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/." isTestSource="false" packagePrefix="gift\app\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.api/src/." isTestSource="false" packagePrefix="gift\api\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/." isTestSource="false" packagePrefix="gift\app\" />
+      <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/../../gift.api/src" isTestSource="false" packagePrefix="gift\api\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/../tests" isTestSource="false" packagePrefix="gift\test\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/gift.back/src/." isTestSource="false" packagePrefix="gift\back\" />
