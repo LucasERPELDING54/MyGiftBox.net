@@ -2,10 +2,11 @@
 
 namespace gift\app\actions\get;
 
-use Slim\Psr7\Request;
-use Slim\Psr7\Response;
+use gift\app\actions\AbstractAction;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
-class GetBoxesAction extends AbstractAction{
+class GetBoxAction extends AbstractAction{
 
     public function __invoke(Request $rq, Response $rs, array $args): Response {
         $html = <<<HTML
