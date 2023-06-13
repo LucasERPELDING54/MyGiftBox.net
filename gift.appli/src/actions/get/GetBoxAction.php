@@ -16,7 +16,8 @@ class GetBoxAction extends AbstractAction{
             </head>
             <form method="post">
                 <label for="id">ID</label>
-                <input type="text" name="id" id="id">
+                <input type="text" placeholder="nom" id="id">
+                <input type="text" placeholder="description" id="id">
                 <input type="submit" value="Envoyer">
             </form>
             </html>

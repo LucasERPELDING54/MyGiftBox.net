@@ -17,7 +17,7 @@ return function (\Slim\App $app): void {
     $app->get('/prestations[/]', \gift\app\actions\get\GetPrestationByIdAction::class)->setName('getPrestationByIdAction');
     $app->get('/prestation[/]', \gift\app\actions\get\GetPrestationsAction::class)->setName('getPrestationsAction');
     $app->get('/categories/{id:\d+}/prestations', \gift\app\actions\get\GetPrestationByCategorie::class)->setName('getPrestationByCategorie');
-    $app->get('/boxes[/]', GetBoxAction::class);
+    $app->get('/boxes[/]', GetBoxAction::class)->setName("boxes");
     $app->get('/api/categories[/]', getCategoriesByApi::class);
     $app->get('/api/boxes/{id:\d+}[/]', getBoxByApi::class);
 };

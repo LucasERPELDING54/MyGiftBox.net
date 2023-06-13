@@ -3,18 +3,16 @@
 {% block title %}Categories{% endblock %}
 
 {% block content %}
-
-<head>
-    <link rel="stylesheet" href="{{ base_path() }}/css/prestationsCat-style.css" >
-</head>
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestationsCat-style.css">
+    </head>
 
     <ul>
-    {% for presta in presta_liste %}
-            <div class="wrapper">   
-                <p>Prestation : <a href="{{ presta.url }}">{{ presta.libelle }}</a> à partir de : {{ presta.tarif }}$<br><br> <img src = "../../../shared/img/{{presta['img']}}"></p> 
-            </div> 
-    {% endfor %}
-    
-    
+        {% set prestaCroissant = presta_liste|sort((a, b) => a.tarif - b.tarif) %}
+        {% for presta in prestaCroissant %}
+            <div class="wrapper">
+                <p>Prestation : <a href="{{ presta.url }}">{{ presta.libelle }}</a> à partir de : {{ presta.tarif }}$<br><br><img src="../../../shared/img/{{ presta.img }}"></p>
+            </div>
+        {% endfor %}
     </ul>
 {% endblock %}

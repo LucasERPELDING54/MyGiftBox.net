@@ -55,22 +55,24 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
     {
         $macros = $this->macros;
         // line 6
-        echo "
-<head>
-    <link rel=\"stylesheet\" href=\"";
-        // line 8
+        echo "    <head>
+        <link rel=\"stylesheet\" href=\"";
+        // line 7
         echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->getBasePath(), "html", null, true);
-        echo "/css/prestationsCat-style.css\" >
-</head>
+        echo "/css/prestationsCat-style.css\">
+    </head>
 
     <ul>
-    ";
+        ";
+        // line 11
+        $context["prestaCroissant"] = twig_sort_filter($this->env, ($context["presta_liste"] ?? null), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, ($context["a"] ?? null), "tarif", [], "any", false, false, false, 11) - twig_get_attribute($this->env, $this->source, ($context["b"] ?? null), "tarif", [], "any", false, false, false, 11)); });
         // line 12
+        echo "        ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["presta_liste"] ?? null));
+        $context['_seq'] = twig_ensure_traversable(($context["prestaCroissant"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["presta"]) {
             // line 13
-            echo "            <div class=\"wrapper\">   
+            echo "            <div class=\"wrapper\">
                 <p>Prestation : <a href=\"";
             // line 14
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "url", [], "any", false, false, false, 14), "html", null, true);
@@ -78,19 +80,17 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "libelle", [], "any", false, false, false, 14), "html", null, true);
             echo "</a> à partir de : ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "tarif", [], "any", false, false, false, 14), "html", null, true);
-            echo "\$<br><br> <img src = \"../../../shared/img/";
-            echo twig_escape_filter($this->env, (($__internal_compile_0 = $context["presta"]) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0["img"] ?? null) : null), "html", null, true);
-            echo "\"></p> 
-            </div> 
-    ";
+            echo "\$<br><br><img src=\"../../../shared/img/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "img", [], "any", false, false, false, 14), "html", null, true);
+            echo "\"></p>
+            </div>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['presta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 17
-        echo "    
-    
-    </ul>
+        echo "    </ul>
 ";
     }
 
@@ -106,7 +106,7 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  91 => 17,  76 => 14,  73 => 13,  69 => 12,  62 => 8,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  93 => 17,  78 => 14,  75 => 13,  70 => 12,  68 => 11,  61 => 7,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
