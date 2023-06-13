@@ -27,4 +27,10 @@ class BoxService {
         return $box->toArray();
     }
 
+    function getPrestaByBoxId(string $id) : array {
+        $box = Box::where('id', $id)->first();
+        $presta = $box->prestations()->get();
+        return $presta->toArray();
+    }
+
 }
