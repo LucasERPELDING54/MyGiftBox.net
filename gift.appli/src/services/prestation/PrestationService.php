@@ -8,7 +8,8 @@ use Slim\Exception\HttpBadRequestException;
 
 class PrestationService {
 
-    function getPresations(){
+    function getPrestations(): \Illuminate\Database\Eloquent\Collection
+    {
         $prestation = Prestation::all();
         return $prestation;
     }

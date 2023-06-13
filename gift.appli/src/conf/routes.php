@@ -20,4 +20,6 @@ return function (\Slim\App $app): void {
     $app->get('/boxes[/]', GetBoxAction::class)->setName("boxes");
     $app->get('/api/categories[/]', getCategoriesByApi::class);
     $app->get('/api/boxes/{id:\d+}[/]', getBoxByApi::class);
+    $app->get('/api/prestations[/]', \gift\api\getApi\getPrestationByApi::class);
+    $app->get('/api/categories/{id:\d+}/prestations', \gift\api\getApi\getPrestationByCategorieApi::class);
 };
