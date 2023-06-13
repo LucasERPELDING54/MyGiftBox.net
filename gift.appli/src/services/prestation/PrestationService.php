@@ -8,8 +8,10 @@ use Slim\Exception\HttpBadRequestException;
 
 class PrestationService {
 
-
-
+    function getPresations(){
+        $prestation = Prestation::all();
+        return $prestation;
+    }
     
     public function getPrestationById( $id) : array {
         try {

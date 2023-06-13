@@ -48,14 +48,10 @@ class __TwigTemplate_9295e1a36cd746215e62499fb6f9c7ca extends Template
     <a href=\"";
         // line 9
         echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("categories"), "html", null, true);
-        echo "\">GiftBox</a>
-    <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("categories"), "html", null, true);
         echo "\">Categories</a>
     <a href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getPrestationByIdAction"), "html", null, true);
+        // line 10
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getPrestationsAction"), "html", null, true);
         echo "\">Prestations</a>
 </div>
 </body>";
@@ -73,7 +69,7 @@ class __TwigTemplate_9295e1a36cd746215e62499fb6f9c7ca extends Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 11,  54 => 10,  50 => 9,  42 => 4,  37 => 1,);
+        return array (  54 => 10,  50 => 9,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
