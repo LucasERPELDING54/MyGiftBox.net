@@ -8,6 +8,12 @@ use Slim\Exception\HttpBadRequestException;
 
 class PrestationService {
 
+
+    function getPresations(){
+        $prestation = Prestation::all();
+        return $prestation;
+    }
+
     public function GetCategoriesByIdAction() : array {
         return Categorie::all()->toArray();
     }
