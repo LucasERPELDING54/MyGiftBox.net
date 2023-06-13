@@ -4,11 +4,12 @@
     <option name="directories">
       <list>
         <option value="$PROJECT_DIR$/tests" />
-        <option value="$PROJECT_DIR$/gift.back/src/tests" />
-        <option value="$PROJECT_DIR$/gift.visit/src/tests" />
+        <option value="$PROJECT_DIR$/gift.appli/src/tests" />
         <option value="$PROJECT_DIR$/gift.back/src/tests" />
         <option value="$PROJECT_DIR$/gift.appli/src/tests" />
+        <option value="$PROJECT_DIR$/gift.visit/src/tests" />
         <option value="$PROJECT_DIR$/tests" />
+        <option value="$PROJECT_DIR$/gift.appli/src/tests" />
       </list>
     </option>
   </component>

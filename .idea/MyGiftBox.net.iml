@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/." isTestSource="false" packagePrefix="gift\app\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/../../gift.api/src" isTestSource="false" packagePrefix="gift\api\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/../tests" isTestSource="false" packagePrefix="gift\test\" />
+      <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/gift.appli/src/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/gift.back/src/." isTestSource="false" packagePrefix="gift\back\" />
       <sourceFolder url="file://$MODULE_DIR$/gift.back/src/tests" isTestSource="true" />
@@ -17,6 +18,8 @@
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/fakerphp" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/fig/http-message-util" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/illuminate/collections" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/illuminate/conditionable" />
