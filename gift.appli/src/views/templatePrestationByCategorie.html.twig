@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Prestation {{ id }}</title>
-</head>
-<body>
-{%include "squellete/templateMain.html.twig" %}
+{% extends "gift.main.twig" %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
     <ul>
-    <img src = "../../../shared/img/gouter.jpg">
+    <img src = "../../public/shared/img/gouter.jpg">
     {% for presta in presta_liste %}
         <img src = "../../../shared/img/{{presta['img']}}">
         <a href="{{ presta.url }}">{{ presta.libelle }}</a>
@@ -15,5 +12,4 @@
     {% endfor %}
     
     </ul>
-</body>
-</html>
+{% endblock %}
