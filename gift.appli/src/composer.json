@@ -6,6 +6,7 @@
     "slim/psr7": "^1.6",
     "illuminate/database":"^9.0",
     "ext-json": "*",
+    "ramsey/uuid":"*",
 
     "twig/twig": "3.*",
     "slim/twig-view": "^3.3",

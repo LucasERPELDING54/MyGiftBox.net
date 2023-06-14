@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Box extends Model {
     protected $table = 'box';
     protected $primaryKey = 'id';
+    protected $fillable = ['id'];
     public $incrementing =  false;
     public $keyType = 'string';
 

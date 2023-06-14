@@ -18,12 +18,12 @@ return function (\Slim\App $app): void {
     $app->get('/prestations[/]', \gift\app\actions\get\GetPrestationByIdAction::class)->setName('getPrestationByIdAction');
     $app->get('/prestation[/]', \gift\app\actions\get\GetPrestationsAction::class)->setName('getPrestationsAction');
     $app->get('/categories/{id:\d+}/prestations', \gift\app\actions\get\GetPrestationByCategorie::class)->setName('getPrestationByCategorie');
-    $app->get('/boxes[/]', GetBoxAction::class)->setName("boxes");
+    $app->get('/boxes[/]', \gift\app\actions\get\GetBoxAction::class)->setName("boxes");
     $app->get('/api/categories[/]', getCategoriesByApi::class);
     $app->get('/api/boxes/{id:\d+}[/]', getBoxByApi::class);
     $app->get('/api/prestations[/]', \gift\api\getApi\getPrestationByApi::class);
     $app->get('/api/categories/{id:\d+}/prestations', \gift\api\getApi\getPrestationByCategorieApi::class);
-    $app->get('/boxes/coffretBox', GetBoxAction::class)->setName("coffretBox");
+    $app->post('/boxes/recapBox', \gift\app\actions\get\GetRecapBoxAction::class)->setName("recapBox");
 
 
 
