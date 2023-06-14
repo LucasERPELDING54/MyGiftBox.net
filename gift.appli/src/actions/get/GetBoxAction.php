@@ -12,20 +12,6 @@ class GetBoxAction extends AbstractAction
 {
     public function __invoke(ServerRequestInterface $rq, ResponseInterface $rs, array $args): ResponseInterface
     {
-        
-
-        if ($rq->getMethod() === 'POST') {
-            if (isset($rq->getParsedBody()['ajouter_coffret'])) {
-                return $rs->withHeader('Location', $this->router->pathFor('coffretBox'))->withStatus(302);
-            }
-
-            $nom = $rq->getParsedBody()['nom'];
-            $description = $rq->getParsedBody()['description'];
-            $cadeau = isset($rq->getParsedBody()['cadeau']);
-            $message_cadeau = $rq->getParsedBody()['messageCadeau'];
-
-            return $rs->withHeader('Location', $this->router->pathFor('coffretBox'))->withStatus(302);
-        }
 
         $data = [
             'csrf_token' => CsrfService::generate()

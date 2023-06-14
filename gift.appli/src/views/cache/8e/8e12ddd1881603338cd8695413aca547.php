@@ -46,6 +46,7 @@ class __TwigTemplate_5508eebee9848da3ceaa206cc7465797 extends Template
 <body>
     <div id=\"header\">
         <h1>GiftBox</h1>
+
     </div>
 </body>";
     }

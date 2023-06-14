@@ -1,0 +1,26 @@
+{% extends "gift.main.twig" %}
+
+{% block title %}Récapitulatif du coffret{% endblock %}
+
+
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/boxRecap-style.css">
+    </head>
+
+    <h1>Récapitulatif du coffret</h1>
+    <h2>Nom du coffret :</h2>
+    <p>{{ nom }}</p>
+
+    <h2>Description :</h2>
+    <p>{{ description }}</p>
+
+    <h2>Options du coffret :</h2>
+    <ul>
+        <li>Cadeau : {{ cadeau ? 'Oui' : 'Non' }}</li>
+        {% if message_cadeau %}
+            <li>Message en cas de cadeau : {{ message_cadeau }}</li>
+        {% endif %}
+    </ul>
+{% endblock %}

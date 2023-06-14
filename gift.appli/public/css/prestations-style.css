@@ -1,8 +1,12 @@
 /* CSS pour les prestations */
-
-h1 {
+  h1 {
     text-align: center;
     color: orange;
+  }
+
+  .header h1 {
+    text-align: center;
+    color: white;
   }
   
   ul {
