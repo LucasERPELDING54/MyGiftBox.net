@@ -57,6 +57,10 @@ class __TwigTemplate_9295e1a36cd746215e62499fb6f9c7ca extends Template
         // line 11
         echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("boxes"), "html", null, true);
         echo "\">Créer un coffret</a>
+    <a href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("recapBox"), "html", null, true);
+        echo "\">Consulter son coffret</a>
 </div>
 </body>";
     }
@@ -73,7 +77,7 @@ class __TwigTemplate_9295e1a36cd746215e62499fb6f9c7ca extends Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 11,  54 => 10,  50 => 9,  42 => 4,  37 => 1,);
+        return array (  62 => 12,  58 => 11,  54 => 10,  50 => 9,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
