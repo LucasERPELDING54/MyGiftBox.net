@@ -1,0 +1,18 @@
+{% extends "gift.main.twig" %}
+
+{% block title %}Prestations{% endblock %}
+
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestations-style.css">
+    </head>
+        
+    <h1>Prestations</h1>
+    <ul>
+        {% for presta in prestation %}
+            <li><a href=" {{ url_for('getPrestationByIdAction', { 'id': presta.id })}}?id={{presta.id}}">{{ presta.libelle }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %} 
+

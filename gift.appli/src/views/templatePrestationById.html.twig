@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Prestation {{ id }}</title>
-</head>
-<body>
-<img src="{{ prestation.url }}">
+{% extends "gift.main.twig" %}
+
+{% block title %}Prestation {{ id }}{% endblock %}
+
+{% block content %}
+
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestationId-style.css">
+    </head>
+   
 <ul>
     <h1>Prestation : {{ prestation.libelle }}</h1>
     <h3>Description : {{ prestation.description }}</h3>
     <h3>Tarif : {{ prestation.tarif }}</h3>
+
+    <img src = "../../../shared/img/{{prestation.img}}">
+
+    <input type="submit" value="Ajouter au coffret">
     
 </ul>
-</body>
-</html>
+
+{% endblock %}

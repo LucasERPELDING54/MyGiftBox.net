@@ -8,6 +8,7 @@ use Slim\Exception\HttpBadRequestException;
 
 class PrestationService {
 
+<<<<<<< HEAD
     public function getCategoriesAction() : array {
         return Categorie::all()->toArray();
     }
@@ -19,6 +20,12 @@ class PrestationService {
         }catch(ModelNotFoundException $e) {
             throw new HttpBadRequestException($request, "L'id de la catégorie n'est pas renseigné");
         }
+=======
+    function getPrestations(): \Illuminate\Database\Eloquent\Collection
+    {
+        $prestation = Prestation::all();
+        return $prestation;
+>>>>>>> fcc7a170080ed96c4db57cdb01853fc46277b3b1
     }
     
     public function getPrestationById( $id) : array {

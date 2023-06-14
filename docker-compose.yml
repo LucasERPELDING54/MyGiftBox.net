@@ -66,7 +66,7 @@ services:
   # mysql + adminer / can be replaced by mariadb
   #############################
   sql:
-    image: mariadb:latest
+    image: mysql:latest
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=gift

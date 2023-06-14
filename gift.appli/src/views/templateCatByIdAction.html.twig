@@ -3,8 +3,14 @@
 {% block title %}Categorie {{ id }}{% endblock %}
 
 {% block content %}
-    <h1>Categorie {{ id }}</h1>
-    <p>{{ libelle }}</p>
-    <p>{{ description }}</p>
-   <h3> <a href="{{ url_prestation }}">Voir les prestations</a></h3>
+
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/categoriesByIdAction-style.css">
+    </head>
+    <div class="categorie-container">
+        <h1 class="categorie-title">Categorie {{ id }}</h1>
+        <p class="categorie-label">{{ libelle }}</p>
+        <p class="categorie-description">{{ description }}</p>
+        <h3 class="categorie-link"><a href="{{ url_prestation }}">Voir les prestations</a></h3>
+    </div>
 {% endblock %}

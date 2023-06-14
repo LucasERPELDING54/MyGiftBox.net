@@ -3,13 +3,16 @@
 {% block title %}Categories{% endblock %}
 
 {% block content %}
-    <ul>
-    <img src = "../../public/shared/img/gouter.jpg">
-    {% for presta in presta_liste %}
-        <img src = "../../../shared/img/{{presta['img']}}">
-        <a href="{{ presta.url }}">{{ presta.libelle }}</a>
-        ({{ presta.tarif }}$ {{ presta.unite }} - id = {{ presta.id }})</li><br>  
-    {% endfor %}
-    
-    </ul>
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestationsCat-style.css">
+    </head>
+
+    <div class="wrapper">
+        {% set prestaCroissant = presta_liste|sort((a, b) => a.tarif - b.tarif) %}
+        {% for presta in prestaCroissant %}
+            <div class="presta-item">
+                <p>Prestation : <a href="{{ presta.url }}">{{ presta.libelle }}</a> à partir de : {{ presta.tarif }}$<br><br><img src="../../../shared/img/{{ presta.img }}"></p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

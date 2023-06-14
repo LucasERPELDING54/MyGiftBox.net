@@ -2,27 +2,38 @@
 
 namespace gift\app\actions\get;
 
-use Slim\Psr7\Request;
-use Slim\Psr7\Response;
+use gift\app\actions\AbstractAction;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use gift\app\services\utils\CsrfService;
+use Slim\Views\Twig;
 
-class GetBoxesAction extends AbstractAction{
+class GetBoxAction extends AbstractAction
+{
+    public function __invoke(ServerRequestInterface $rq, ResponseInterface $rs, array $args): ResponseInterface
+    {
+        
 
-    public function __invoke(Request $rq, Response $rs, array $args): Response {
-        $html = <<<HTML
-            <html>
-            <head>
-            <title>Boxes</title>
-            </head>
-            <form method="post">
-                <label for="id">ID</label>
-                <input type="text" name="id" id="id">
-                <input type="submit" value="Envoyer">
-            </form>
-            </html>
-            HTML;
+        if ($rq->getMethod() === 'POST') {
+            if (isset($rq->getParsedBody()['ajouter_coffret'])) {
+                return $rs->withHeader('Location', $this->router->pathFor('coffretBox'))->withStatus(302);
+            }
 
-        $rs->getBody()->write($html);
-        return $rs;
+            $nom = $rq->getParsedBody()['nom'];
+            $description = $rq->getParsedBody()['description'];
+            $cadeau = isset($rq->getParsedBody()['cadeau']);
+            $message_cadeau = $rq->getParsedBody()['messageCadeau'];
+
+            return $rs->withHeader('Location', $this->router->pathFor('coffretBox'))->withStatus(302);
+        }
+
+        $data = [
+            'csrf_token' => CsrfService::generate()
+        ];
+
+        $view = Twig::fromRequest($rq);
+       
+        return  $view->render($rs, 'templateBoxCreation.html.twig' ,$data);
+      
     }
-
 }

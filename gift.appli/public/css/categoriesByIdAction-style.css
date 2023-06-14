@@ -1,0 +1,31 @@
+.categorie-container {
+    text-align: center;
+}
+
+.categorie-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.categorie-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.categorie-description {
+    margin-bottom: 20px;
+}
+
+.categorie-link {
+    margin-top: 20px;
+}
+
+.categorie-link a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.categorie-link a:hover {
+    text-decoration: underline;
+}

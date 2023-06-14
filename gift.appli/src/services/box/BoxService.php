@@ -30,6 +30,7 @@ class BoxService {
         return $box->toArray();
     }
 
+<<<<<<< HEAD
     function addPrestation($boxId, $prestaId, $qtt){
         try{
             $box = Box::with('prestations')->findOrFail($boxId);
@@ -46,4 +47,12 @@ class BoxService {
             throw new Error("erreur lors de l'ajout de la prestation à la box");
         }
     }
+=======
+    function getPrestaByBoxId(string $id) : array {
+        $box = Box::where('id', $id)->first();
+        $presta = $box->prestations()->get();
+        return $presta->toArray();
+    }
+
+>>>>>>> fcc7a170080ed96c4db57cdb01853fc46277b3b1
 }
