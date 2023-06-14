@@ -8,7 +8,7 @@ use Slim\Exception\HttpBadRequestException;
 
 class PrestationService {
 
-    public function GetCategoriesByIdAction() : array {
+    public function getCategoriesAction() : array {
         return Categorie::all()->toArray();
     }
 

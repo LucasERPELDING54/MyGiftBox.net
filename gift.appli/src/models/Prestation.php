@@ -6,6 +6,7 @@ class Prestation extends \Illuminate\Database\Eloquent\Model {
 
     protected $table = 'prestation';
     protected $primaryKey = 'id';
+    protected $fillable = ['id'];
     public $timestamps = false;
     public $incrementing =  false;
     public $keyType = 'string';
