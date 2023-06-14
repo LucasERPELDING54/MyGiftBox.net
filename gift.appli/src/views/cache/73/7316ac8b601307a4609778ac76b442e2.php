@@ -56,21 +56,31 @@ class __TwigTemplate_6b12c71693f16ae2d0ed504d68d41ea0 extends Template
     {
         $macros = $this->macros;
         // line 6
-        echo "    <h1>Categorie ";
+        echo "
+    <head>
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->getBasePath(), "html", null, true);
+        echo "/css/categoriesByIdAction-style.css\">
+    </head>
+    <div class=\"categorie-container\">
+        <h1 class=\"categorie-title\">Categorie ";
+        // line 11
         echo twig_escape_filter($this->env, ($context["id"] ?? null), "html", null, true);
         echo "</h1>
-    <p>";
-        // line 7
+        <p class=\"categorie-label\">";
+        // line 12
         echo twig_escape_filter($this->env, ($context["libelle"] ?? null), "html", null, true);
         echo "</p>
-    <p>";
-        // line 8
+        <p class=\"categorie-description\">";
+        // line 13
         echo twig_escape_filter($this->env, ($context["description"] ?? null), "html", null, true);
         echo "</p>
-   <h3> <a href=\"";
-        // line 9
+        <h3 class=\"categorie-link\"><a href=\"";
+        // line 14
         echo twig_escape_filter($this->env, ($context["url_prestation"] ?? null), "html", null, true);
         echo "\">Voir les prestations</a></h3>
+    </div>
 ";
     }
 
@@ -86,7 +96,7 @@ class __TwigTemplate_6b12c71693f16ae2d0ed504d68d41ea0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  72 => 9,  68 => 8,  64 => 7,  59 => 6,  55 => 5,  47 => 3,  36 => 1,);
+        return array (  81 => 14,  77 => 13,  73 => 12,  69 => 11,  63 => 8,  59 => 6,  55 => 5,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()

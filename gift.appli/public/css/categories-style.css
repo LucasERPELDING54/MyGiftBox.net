@@ -1,0 +1,31 @@
+/* CSS pour les categories*/
+
+h1 {
+    text-align: center;
+    color: orange;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex-basis: 20%; 
+    text-align: center; 
+  }
+  
+  a {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 18 px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

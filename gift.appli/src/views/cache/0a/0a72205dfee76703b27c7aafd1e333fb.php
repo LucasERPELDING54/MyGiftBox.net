@@ -57,25 +57,33 @@ class __TwigTemplate_93b3a67cb9e81f9c7c8c288fbd607349 extends Template
         $macros = $this->macros;
         // line 6
         echo "
+    <head>
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->getBasePath(), "html", null, true);
+        echo "/css/prestationId-style.css\">
+    </head>
    
 <ul>
     <h1>Prestation : ";
-        // line 9
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "libelle", [], "any", false, false, false, 9), "html", null, true);
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "libelle", [], "any", false, false, false, 12), "html", null, true);
         echo "</h1>
     <h3>Description : ";
-        // line 10
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "description", [], "any", false, false, false, 10), "html", null, true);
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "description", [], "any", false, false, false, 13), "html", null, true);
         echo "</h3>
     <h3>Tarif : ";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "tarif", [], "any", false, false, false, 11), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "tarif", [], "any", false, false, false, 14), "html", null, true);
         echo "</h3>
 
     <img src = \"../../../shared/img/";
-        // line 13
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "img", [], "any", false, false, false, 13), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["prestation"] ?? null), "img", [], "any", false, false, false, 16), "html", null, true);
         echo "\">
+
+    <input type=\"submit\" value=\"Ajouter au coffret\">
     
 </ul>
 
@@ -94,7 +102,7 @@ class __TwigTemplate_93b3a67cb9e81f9c7c8c288fbd607349 extends Template
 
     public function getDebugInfo()
     {
-        return array (  77 => 13,  72 => 11,  68 => 10,  64 => 9,  59 => 6,  55 => 5,  47 => 3,  36 => 1,);
+        return array (  83 => 16,  78 => 14,  74 => 13,  70 => 12,  63 => 8,  59 => 6,  55 => 5,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()

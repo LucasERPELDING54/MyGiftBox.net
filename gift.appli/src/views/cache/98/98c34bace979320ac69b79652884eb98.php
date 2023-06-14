@@ -55,27 +55,35 @@ class __TwigTemplate_5b4a864c1617f207c5b134dab474e330 extends Template
     {
         $macros = $this->macros;
         // line 6
-        echo "    <h1>Prestations</h1>
+        echo "
+    <head>
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->getBasePath(), "html", null, true);
+        echo "/css/prestations-style.css\">
+    </head>
+        
+    <h1>Prestations</h1>
     <ul>
         ";
-        // line 8
+        // line 13
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["prestation"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["presta"]) {
-            // line 9
+            // line 14
             echo "            <li><a href=\" ";
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getPrestationByIdAction", ["id" => twig_get_attribute($this->env, $this->source, $context["presta"], "id", [], "any", false, false, false, 9)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getPrestationByIdAction", ["id" => twig_get_attribute($this->env, $this->source, $context["presta"], "id", [], "any", false, false, false, 14)]), "html", null, true);
             echo "?id=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "id", [], "any", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "id", [], "any", false, false, false, 14), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "libelle", [], "any", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "libelle", [], "any", false, false, false, 14), "html", null, true);
             echo "</a></li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['presta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 16
         echo "    </ul>
 ";
     }
@@ -92,7 +100,7 @@ class __TwigTemplate_5b4a864c1617f207c5b134dab474e330 extends Template
 
     public function getDebugInfo()
     {
-        return array (  79 => 11,  66 => 9,  62 => 8,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  87 => 16,  74 => 14,  70 => 13,  62 => 8,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()

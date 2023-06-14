@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="{{ base_path() }}/css/prestationsCat-style.css">
     </head>
 
-    <ul>
+    <div class="wrapper">
         {% set prestaCroissant = presta_liste|sort((a, b) => a.tarif - b.tarif) %}
         {% for presta in prestaCroissant %}
-            <div class="wrapper">
+            <div class="presta-item">
                 <p>Prestation : <a href="{{ presta.url }}">{{ presta.libelle }}</a> à partir de : {{ presta.tarif }}$<br><br><img src="../../../shared/img/{{ presta.img }}"></p>
             </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

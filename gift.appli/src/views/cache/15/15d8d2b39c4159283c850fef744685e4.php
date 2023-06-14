@@ -55,25 +55,33 @@ class __TwigTemplate_0933fad90c4974165465ac8f047c0dfd extends Template
     {
         $macros = $this->macros;
         // line 6
-        echo "    <h1>Categories</h1>
+        echo "
+    <head>
+        <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->getBasePath(), "html", null, true);
+        echo "/css/categories-style.css\">
+    </head>
+
+    <h1>Categories</h1>
     <ul>
         ";
-        // line 8
+        // line 13
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["categ"]) {
-            // line 9
+            // line 14
             echo "            <li><a href=\"";
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getCategoriesByIdAction", ["id" => twig_get_attribute($this->env, $this->source, $context["categ"], "id", [], "any", false, false, false, 9)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Slim\Views\TwigRuntimeExtension')->urlFor("getCategoriesByIdAction", ["id" => twig_get_attribute($this->env, $this->source, $context["categ"], "id", [], "any", false, false, false, 14)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categ"], "libelle", [], "any", false, false, false, 9), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categ"], "libelle", [], "any", false, false, false, 14), "html", null, true);
             echo "</a></li>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categ'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 16
         echo "    </ul>
 ";
     }
@@ -90,7 +98,7 @@ class __TwigTemplate_0933fad90c4974165465ac8f047c0dfd extends Template
 
     public function getDebugInfo()
     {
-        return array (  77 => 11,  66 => 9,  62 => 8,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  85 => 16,  74 => 14,  70 => 13,  62 => 8,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()

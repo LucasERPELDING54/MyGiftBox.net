@@ -4,6 +4,9 @@
 
 {% block content %}
 
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestationId-style.css">
+    </head>
    
 <ul>
     <h1>Prestation : {{ prestation.libelle }}</h1>
@@ -11,6 +14,8 @@
     <h3>Tarif : {{ prestation.tarif }}</h3>
 
     <img src = "../../../shared/img/{{prestation.img}}">
+
+    <input type="submit" value="Ajouter au coffret">
     
 </ul>
 

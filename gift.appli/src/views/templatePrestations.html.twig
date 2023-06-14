@@ -3,6 +3,11 @@
 {% block title %}Prestations{% endblock %}
 
 {% block content %}
+
+    <head>
+        <link rel="stylesheet" href="{{ base_path() }}/css/prestations-style.css">
+    </head>
+        
     <h1>Prestations</h1>
     <ul>
         {% for presta in prestation %}

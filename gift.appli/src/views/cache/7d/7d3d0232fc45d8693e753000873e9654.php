@@ -62,7 +62,7 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
         echo "/css/prestationsCat-style.css\">
     </head>
 
-    <ul>
+    <div class=\"wrapper\">
         ";
         // line 11
         $context["prestaCroissant"] = twig_sort_filter($this->env, ($context["presta_liste"] ?? null), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, ($context["a"] ?? null), "tarif", [], "any", false, false, false, 11) - twig_get_attribute($this->env, $this->source, ($context["b"] ?? null), "tarif", [], "any", false, false, false, 11)); });
@@ -72,7 +72,7 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
         $context['_seq'] = twig_ensure_traversable(($context["prestaCroissant"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["presta"]) {
             // line 13
-            echo "            <div class=\"wrapper\">
+            echo "            <div class=\"presta-item\">
                 <p>Prestation : <a href=\"";
             // line 14
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["presta"], "url", [], "any", false, false, false, 14), "html", null, true);
@@ -90,7 +90,7 @@ class __TwigTemplate_99008ff35230f09b0fb2b4705c6d22f2 extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['presta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 17
-        echo "    </ul>
+        echo "    </div>
 ";
     }
 
