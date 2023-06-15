@@ -24,6 +24,9 @@
         <Configuration>
           <option name="path" value="$PROJECT_DIR$/gift.appli/src/tests" />
         </Configuration>
+        <Configuration>
+          <option name="path" value="$PROJECT_DIR$/gift.appli/src/tests" />
+        </Configuration>
       </list>
     </option>
   </component>
