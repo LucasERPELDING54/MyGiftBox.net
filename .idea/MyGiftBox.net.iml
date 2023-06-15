@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/gift.visit/src/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/gift.api/src/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/gift.appli/src/vendor/doctrine/inflector" />
@@ -130,6 +131,59 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/collection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/fig/http-message-util" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/conditionable" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/container" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/database" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/macroable" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/illuminate/support" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/nikic/fast-route" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/php-di/invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/php-di/php-di" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/php-di/phpdoc-reader" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/php-di/slim-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/http-server-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/http-server-middleware" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/respect/stringifier" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/respect/validation" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/slim/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/slim/slim" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/slim/twig-view" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/gift.api/src/vendor/voku/portable-ascii" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
