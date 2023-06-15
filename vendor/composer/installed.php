@@ -3,7 +3,7 @@
         'name' => 'app/gift',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '424330735d384e4770b78b0bd6f30425c432b497',
+        'reference' => '6c1dd26f4e5ae3ad2c35100bbfd7826e3419451f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'app/gift' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '424330735d384e4770b78b0bd6f30425c432b497',
+            'reference' => '6c1dd26f4e5ae3ad2c35100bbfd7826e3419451f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

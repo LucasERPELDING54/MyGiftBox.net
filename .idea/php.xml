@@ -123,6 +123,9 @@
       <path value="$PROJECT_DIR$/gift.appli/src/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/gift.appli/src/vendor/psr/http-server-middleware" />
       <path value="$PROJECT_DIR$/gift.appli/src/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
