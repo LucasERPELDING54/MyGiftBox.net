@@ -10,9 +10,6 @@ return function (\Slim\App $app): void {
 
 
     $app->get('/', \gift\app\actions\ConnexionAction::class)->setName('connexion');
-    if(!isset($_SESSION['Co'])){
-        $app->redirect($app->getRouteCollector()->getRouteParser()->urlFor('connexion'), 400);
-    }
     $app->get('/categories[/]', \gift\app\actions\get\GetCategoriesAction::class)->setName("categories");
     $app->get('/categories/{id:\d+}[/]', \gift\app\actions\get\GetCategoriesByIdAction::class)->setName('getCategoriesByIdAction');
     $app->get('/prestations[/]', \gift\app\actions\get\GetPrestationByIdAction::class)->setName('getPrestationByIdAction');
