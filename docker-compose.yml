@@ -7,6 +7,10 @@ networks:
 services:
   app:
     image: canals/php:latest
+    environment:
+      - http_proxy=http://www-cache.iutnc.univ-lorraine.fr:3128
+      - https_proxy=http://www-cache.iutnc.univ-lorraine.fr:3128
+
     ports:
       - "15081:80"
       - "15444:443"
@@ -34,6 +38,10 @@ services:
       - sql
   api:
     image: canals/php:latest
+    environment:
+      - http_proxy=http://www-cache.iutnc.univ-lorraine.fr:3128
+      - https_proxy=http://www-cache.iutnc.univ-lorraine.fr:3128
+
     ports:
       - "15281:80"
       - "15644:443"
