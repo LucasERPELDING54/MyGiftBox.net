@@ -6,6 +6,7 @@ use gift\app\actions\AbstractAction;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use gift\app\services\utils\CsrfService;
+use gift\app\services\box\BoxService;
 use Slim\Views\Twig;
 
 class GetRecapBoxAction extends AbstractAction
@@ -29,6 +30,11 @@ class GetRecapBoxAction extends AbstractAction
             'cadeau' => $cadeau ?? null,
             'message_cadeau' => $message_cadeau ?? null,
         ];
+
+        create();
+
+
+
 
         $view = Twig::fromRequest($rq);
        
