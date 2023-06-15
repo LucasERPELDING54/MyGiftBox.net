@@ -11,7 +11,7 @@ class ConnexionService
     {
         try {
             return Connexion::where('identifiant', '=', $identifiant, 'and')->where('password', '=', $password)->firstOrFail();
-        }catch (ModelNotFoundException $e){
+        }catch (Q $e){
             return false;
         }
     }
