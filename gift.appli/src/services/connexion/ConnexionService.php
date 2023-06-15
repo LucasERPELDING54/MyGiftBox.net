@@ -10,7 +10,7 @@ class ConnexionService
     function getData($identifiant, $password)
     {
         try {
-            return Connexion::where('identifiant', '=',"'" .$identifiant."'", 'and')->where('password', '=', $password)->firstOrFail();
+            return Connexion::where('identifiant', '=',"'" .$identifiant."'", 'and')->where('Password', '=', $password)->firstOrFail();
         }catch (Q $e){
             return false;
         }
