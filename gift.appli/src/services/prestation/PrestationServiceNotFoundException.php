@@ -1,6 +1,6 @@
 <?php
 
-namespace gift\app\services\prestations;
+namespace gift\app\services\prestation;
 
 class PrestationServiceNotFoundException extends \Exception {
 

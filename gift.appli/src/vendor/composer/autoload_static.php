@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
+=======
+class ComposerStaticInit380c1aa2feba04fb708133630b90fbdf
+>>>>>>> 1a70546348aee359f4e76844fb0ab222d9d6ed97
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -22,6 +26,7 @@ class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -55,6 +60,11 @@ class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
             'Slim\\Views\\' => 11,
             'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
+        ),
+        'R' => 
+        array (
+            'Ramsey\\Uuid\\' => 12,
+            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -170,6 +180,14 @@ class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'Ramsey\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Ramsey\\Collection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -198,9 +216,9 @@ class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
         ),
         'Illuminate\\Support\\' => 
         array (
-            0 => __DIR__ . '/..' . '/illuminate/macroable',
+            0 => __DIR__ . '/..' . '/illuminate/collections',
             1 => __DIR__ . '/..' . '/illuminate/conditionable',
-            2 => __DIR__ . '/..' . '/illuminate/collections',
+            2 => __DIR__ . '/..' . '/illuminate/macroable',
             3 => __DIR__ . '/..' . '/illuminate/support',
         ),
         'Illuminate\\Database\\' => 
@@ -1377,9 +1395,15 @@ class ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitc462584b7c8557775c5d3e0cf15698a4::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit380c1aa2feba04fb708133630b90fbdf::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit380c1aa2feba04fb708133630b90fbdf::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit380c1aa2feba04fb708133630b90fbdf::$classMap;
+>>>>>>> 1a70546348aee359f4e76844fb0ab222d9d6ed97
 
         }, null, ClassLoader::class);
     }

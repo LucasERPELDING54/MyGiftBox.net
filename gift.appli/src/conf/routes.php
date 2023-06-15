@@ -7,11 +7,12 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 return function (\Slim\App $app): void {
-    $app->get('/', function (Request $request, Response $response, array $args) {
-        $response->getBody()->write("Hello world!");
-        return $response;
-    });
 
+
+    $app->get('/', \gift\app\actions\ConnexionAction::class)->setName('connexion');
+    if(!isset($_SESSION['Co'])){
+        $app->redirect($app->getRouteCollector()->getRouteParser()->urlFor('connexion'), 400);
+    }
     $app->get('/categories[/]', \gift\app\actions\get\GetCategoriesAction::class)->setName("categories");
     $app->get('/categories/{id:\d+}[/]', \gift\app\actions\get\GetCategoriesByIdAction::class)->setName('getCategoriesByIdAction');
     $app->get('/prestations[/]', \gift\app\actions\get\GetPrestationByIdAction::class)->setName('getPrestationByIdAction');
@@ -23,5 +24,7 @@ return function (\Slim\App $app): void {
     $app->get('/api/prestations[/]', \gift\api\getApi\getPrestationByApi::class);
     $app->get('/api/categories/{id:\d+}/prestations', \gift\api\getApi\getPrestationByCategorieApi::class);
     $app->post('/boxes/recapBox', \gift\app\actions\get\GetRecapBoxAction::class)->setName("recapBox");
+
+
 
 };

@@ -6,7 +6,7 @@ namespace gift\tests;
 use Faker\Factory;
 use gift\app\models\Categorie;
 use gift\app\models\Prestation;
-use gift\app\services\prestations\PrestationsService;
+use gift\app\services\prestation\PrestationService;
 use \PHPUnit\Framework\TestCase;
 use Illuminate\Database\Capsule\Manager as DB ;
 
@@ -15,6 +15,7 @@ final class PrestationServiceTest extends TestCase
 
     private static array $prestations  = [];
     private static array $categories = [];
+
     public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
@@ -23,6 +24,7 @@ final class PrestationServiceTest extends TestCase
         $db->addConnection(parse_ini_file(__DIR__ . '../../src/conf/gift.db.test.ini'));
         $db->setAsGlobal();
         $db->bootEloquent();
+        
         $faker = \Faker\Factory::create('fr_FR');
 
         $c1= Categorie::create([
@@ -70,34 +72,35 @@ final class PrestationServiceTest extends TestCase
 
     public function testgetCategories(): void {
 
-        $prestationService = new PrestationsService();
-        $categories = $prestationService->getCategoriesAction();
+        $prestationService = new PrestationService();
+        $testcategories = $prestationService->getCategoriesAction();
 
-        $this->assertEquals(count(self::$categories), count($categories));
-        $this->assertEquals(self::$categories[0]['id'], $categories[0]['id']);
-        $this->assertEquals(self::$categories[0]['libelle'], $categories[0]['libelle']);
-        $this->assertEquals(self::$categories[0]['description'], $categories[0]['description']);
-        $this->assertEquals(self::$categories[1]['libelle'], $categories[1]['libelle']);
-        $this->assertEquals(self::$categories[1]['description'], $categories[1]['description']);
-        $this->assertEquals(self::$categories[1]['id'], $categories[1]['id']);
+        $this->assertEquals(count(self::$categories), count($testcategories));
+        $this->assertEquals(self::$categories[0]['id'], $testcategories[0]['id']);
+        $this->assertEquals(self::$categories[0]['libelle'], $testcategories[0]['libelle']);
+        $this->assertEquals(self::$categories[0]['description'], $testcategories[0]['description']);
+        $this->assertEquals(self::$categories[1]['libelle'], $testcategories[1]['libelle']);
+        $this->assertEquals(self::$categories[1]['description'], $testcategories[1]['description']);
+        $this->assertEquals(self::$categories[1]['id'], $testcategories[1]['id']);
     }
 
     public function testgetCategorieById(): void {
 
-        $prestationService = new PrestationsService();
-        $categorie = $prestationService->getCategorieByIdAction(self::$categories[0]['id']);
+        $prestationService = new PrestationService();
+        $categorie = $prestationService->getCategorieByID(self::$categories[0]['id']);
 
         $this->assertEquals(self::$categories[0]['id'], $categorie['id']);
         $this->assertEquals(self::$categories[0]['libelle'], $categorie['libelle']);
         $this->assertEquals(self::$categories[0]['description'], $categorie['description']);
 
-        $this->expectException(\gift\app\services\prestations\PrestationsServiceNotFoundException::class);
-        $prestationService->getCategorieByIdAction(-1);
+        $this->expectException(\gift\app\services\prestation\PrestationServiceNotFoundException::class);
+        $prestationService->getCategorieByID(-1);
     }
+
     public function testgetPrestationById(): void
     {
-        $prestationService = new PrestationsService();
-        $prestation = $prestationService->getPrestationByIdAction(self::$prestations[0]['id']);
+        $prestationService = new PrestationService();
+        $prestation = $prestationService->getPrestationById(self::$prestations[0]['id']);
 
         $this->assertEquals(self::$prestations[0]['id'], $prestation['id']);
         $this->assertEquals(self::$prestations[0]['libelle'], $prestation['libelle']);
@@ -105,8 +108,8 @@ final class PrestationServiceTest extends TestCase
         $this->assertEquals(self::$prestations[0]['tarif'], $prestation['tarif']);
         $this->assertEquals(self::$prestations[0]['unite'], $prestation['unite']);
 
-        $this->expectException(\gift\app\services\prestations\PrestationsServiceNotFoundException::class);
-        $prestationService->getPrestationByIdAction('AAAAAAA');
+        $this->expectException(\gift\app\services\prestation\PrestationServiceNotFoundException::class);
+        $prestationService->getPrestationById('AAAAAAA');
     }
 
 
