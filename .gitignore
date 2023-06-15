@@ -2,7 +2,7 @@
 .conf
 .conf.*
 .dist
-
+gift.appli/src/vendor/*
 gift.appli/src/views/cache/*
 .idea
 .idea/*
