@@ -12,7 +12,7 @@ class ConnexionService
         try {
             //return Connexion::where('identifiant', '=',$identifiant, 'and')->where('Password', '=', $password)->firstOrFail();
 
-            return Connexion::where('identifiant', '=',$identifiant)->firstOrFail();
+            return Connexion::where('identifiant', '=',$identifiant)->first();
         }catch (Q $e){
             return false;
         }
