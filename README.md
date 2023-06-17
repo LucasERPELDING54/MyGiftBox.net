@@ -1,5 +1,5 @@
 # MyGiftBox.net
-Projet giftbox réalisé par Robert Antonin, Quentin Flageollet, Lucas Erpelding dans le cadre d'un projet d'architecture logicielle.
+Projet giftbox réalisé par Antonin Robert, Quentin Flageollet, Lucas Erpelding dans le cadre d'un projet d'architecture logicielle.
 
 Vous retrouverez ici toutes les indications nécessaire pour utiliser le projet MyGiftBox.net.
 
