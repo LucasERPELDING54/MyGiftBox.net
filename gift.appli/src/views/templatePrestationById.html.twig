@@ -15,8 +15,11 @@
 
     <img src = "../../../shared/img/{{prestation.img}}">
 
-    <input type="submit" value="Ajouter au coffret">
-    
+    <form method="post">
+    <input type="submit" id="presta" name="presta" value="Ajouter au coffret" formaction="{{ url_for('box2Presta') }}">
+</form>
+
+
 </ul>
 
 {% endblock %}

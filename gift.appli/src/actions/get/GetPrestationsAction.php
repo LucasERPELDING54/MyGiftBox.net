@@ -13,13 +13,20 @@ class GetPrestationsAction extends AbstractAction
 {
     public function __invoke(Request $request, Response $response, array $args): Response
     {
+
+
+       
+
+
         $service = new PrestationService();
         $cat = $service->getPrestations();
         $routeContext = \Slim\Routing\RouteContext::fromRequest($request)->getRouteParser();
         foreach ($cat as $key => $value) {
             $cat[$key]['url'] = $routeContext->urlFor('getPrestationsAction', ['id' => $value['id']]);
         }
-        $data = ['prestation' => $cat];
+        $data = [
+            'prestation' => $cat
+        ];
         $view = Twig::fromRequest($request);
         return $view->render($response, 'templatePrestations.html.twig', $data);
 

@@ -14,27 +14,19 @@ class GetRecapBoxAction extends AbstractAction
     public function __invoke(ServerRequestInterface $rq, ResponseInterface $rs, array $args): ResponseInterface
     {
         
-        if ($rq->getMethod() === 'POST') {
-            
-            $nom = $rq->getParsedBody()['nom'];
-            $description = $rq->getParsedBody()['description'];
-            $cadeau = isset($rq->getParsedBody()['cadeau']);
-            $message_cadeau = $rq->getParsedBody()['messageCadeau'];
-
+        $data = $rq->getParsedBody();
+        $data['libelle'] = filter_var($data['nom']);
+        $data['description'] = filter_var($data['description']);
+        if(isset($data['cadeau'])){
+            $data['kdo'] =  1;
+            $data['message_kdo'] = filter_var($data['messageCadeau'])?? null;
+        }else{
+            $data['kdo'] = 0; 
+            $data['message_kdo'] = '';
         }
-
-
-        $data = [
-            'nom' => $nom,
-            'description' => $description,
-            'cadeau' => $cadeau ?? null,
-            'message_cadeau' => $message_cadeau ?? null,
-        ];
-
-        create();
-
-
-
+   
+        $boxService = new BoxService();
+        $boxService = $boxService->createBox($data);
 
         $view = Twig::fromRequest($rq);
        

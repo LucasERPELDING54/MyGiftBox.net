@@ -3,6 +3,7 @@
 namespace gift\app\services\box;
 
 use gift\app\models\Box;
+use gift\app\models\Box2Presta;
 use gift\app\models\Categorie;
 use gift\app\models\Prestation;
 use gift\app\services\prestation\PrestationService;
@@ -10,12 +11,17 @@ use Ramsey\Uuid\Uuid;
 
 class BoxService {
 
-    function create(array $donnee){
+    function createBox(array $donnee){
+
+        Box::where('id', 1)->delete();
+         Box2Presta::where('box_id', 1)->delete();
+
         $box = new Box();
-        $box->id = Uuid::uuid4()->toString();
+        $box->id = 1;
         $box->libelle = $donnee['libelle'];
         $box->description = $donnee['description'];
-
+        $box->kdo = $donnee['kdo'];
+        $box->message_kdo = $donnee['message_kdo'];
         $box->save();
         return $box;
     }
@@ -30,29 +36,33 @@ class BoxService {
         return $box->toArray();
     }
 
-<<<<<<< HEAD
-    function addPrestation($boxId, $prestaId, $qtt){
-        try{
+    function updateBoxPrestation($boxId, $prestaId, $qtt){
+        
+        try {
+            Box2Presta::where('box_id', 1)->delete();
             $box = Box::with('prestations')->findOrFail($boxId);
             $presta = Prestation::findOrFail($prestaId);
             $boxContent = $box->prestations;
+            
             if($boxContent->contains($presta)){
-                $box->prestations()->find($prestaId)->pivot->quantite+= $qtt;
+                $pivot = $box->prestations()->find($prestaId)->pivot;
+                $pivot->quantite += $qtt;
+                $pivot->save();
             }else{
                 $box->prestations()->attach($prestaId, ['quantite' => $qtt]);
             }
+            
             $box->montant += $presta->tarif * $qtt;
             $box->save();
-        }catch(Error $e){
-            throw new Error("erreur lors de l'ajout de la prestation à la box");
-        }
+        } catch (Exception $e) {
+            throw new Exception("Erreur lors de la mise à jour de la prestation dans la box");
+        }   
     }
-=======
+    
     function getPrestaByBoxId(string $id) : array {
         $box = Box::where('id', $id)->first();
         $presta = $box->prestations()->get();
         return $presta->toArray();
     }
 
->>>>>>> fcc7a170080ed96c4db57cdb01853fc46277b3b1
 }

@@ -21,7 +21,9 @@ return function (\Slim\App $app): void {
     $app->get('/api/prestations[/]', \gift\api\getApi\getPrestationByApi::class);
     $app->get('/api/categories/{id:\d+}/prestations', \gift\api\getApi\getPrestationByCategorieApi::class);
     $app->post('/boxes/recapBox', \gift\app\actions\get\GetRecapBoxAction::class)->setName("recapBox");
+    $app->post('/boxes/box2Presta', \gift\app\actions\get\GetBox2PrestaProcess::class)->setName("box2Presta");
 
 
 
 };
+    

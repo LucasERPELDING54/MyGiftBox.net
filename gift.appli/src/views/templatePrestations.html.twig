@@ -11,8 +11,9 @@
     <h1>Prestations</h1>
     <ul>
         {% for presta in prestation %}
-            <li><a href=" {{ url_for('getPrestationByIdAction', { 'id': presta.id })}}?id={{presta.id}}">{{ presta.libelle }}</a></li>
+            <li><a href=" {{ url_for('getPrestationByIdAction', { 'id': presta.id })}}?id={{presta.id}}">{{ presta.libelle }} {{test}}</a></li>
         {% endfor %}
+
     </ul>
 {% endblock %} 
 
